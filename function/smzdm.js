@@ -23,11 +23,11 @@ async function downFile () {
 }
 
 async function changeFiele () {
-    let content = await fs.readFileSync('./smzdm_checkin.js', 'utf8')
+    let content = await fs.readFileSync('./magic.json', 'utf8')
     content = content.replace(/"smzdm_cookie": ""/, `"smzdm_cookie": "${KEY}"`)
     content = content.replace(/"smzdm_account": ""/, `"smzdm_account": "${USER}"`)
     content = content.replace(/"smzdm_password": ""/, `"smzdm_password": "${PASS}"`)
-    await fs.writeFileSync( './smzdm_checkin.js', content, 'utf8')
+    await fs.writeFileSync( './magic.json', content, 'utf8')
 }
 
 async function deleteFile(path) {
